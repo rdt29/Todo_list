@@ -13,13 +13,14 @@ body {
 
 #main {
   height: 100vh;
+  background-color: rgba(46, 81, 95, 0.747);
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   
-  background-color: rgba(46, 81, 95, 0.747);
+  
   
   
 }
