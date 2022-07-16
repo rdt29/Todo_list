@@ -19,6 +19,7 @@ const List = (props) => {
     })
   })
   return (
+    
     <div className="cross">
       <i>
         <button

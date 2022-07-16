@@ -3,34 +3,26 @@ import List from "./List";
 import gsap from "gsap";
 import { useEffect } from "react";
 
+
 const TodoCard = () => {
   const [seevalue, getvalue] = useState("");
 
-  const LocalStorageData = ()=>{
-    let list = localStorage.getItem("task")
-    if(list)
-    {
+  const LocalStorageData = () => {
+    let list = localStorage.getItem("task");
+    if (list) {
       return JSON.parse(localStorage.getItem("task"));
+    } else {
+      return [];
     }
-    else
-
-    {
-      return []
-    }
-  }
+  };
 
   const [task, gettask] = useState(LocalStorageData());
-  console.log("task: ", task);
+  // console.log("task: ", task);
   useEffect(() => {
-
-
     gsap.to(".submit", {
       rotate: 360,
       duration: 1.1,
     });
-
-
-    
   }, []);
   const Input = (elem) => {
     getvalue(elem.target.value);
@@ -38,8 +30,8 @@ const TodoCard = () => {
   const Delete = (elem) => {
     // console.log(elem.target.key);
     // console.log(elem.target.id);
-    console.log(elem);
-window.localStorage.clear(elem)
+    // console.log(elem);
+    window.localStorage.clear(elem);
     gettask((elemall) => {
       return elemall.filter((item, index) => {
         return elem !== index;
@@ -57,12 +49,11 @@ window.localStorage.clear(elem)
       alert("task can't be blank");
     }
 
-    // gsap and local storage 
-  
-
+    // gsap and local storage
   };
 
-    localStorage.setItem('task' ,JSON.stringify(task))
+  localStorage.setItem("task", JSON.stringify(task));
+
   return (
     <>
       <div id="main">
