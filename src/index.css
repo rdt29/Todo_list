@@ -1,13 +1,181 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: Gilroy;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
+
+#main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  background-color: rgba(46, 81, 95, 0.747);
+}
+#card {
+  height: 80vh;
+  width: 25%;
+  background-color: rgb(255, 255, 255);
+  /* background-color: red; */
+  border-radius: 30px;
+  /* overflow: hidden; */
+  overflow-y: auto;
+  /* overflow-x: auto; */
+  padding: 20px;
+  position: relative;
+  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.591);
+}
+#card::-webkit-scrollbar {
+  display: none;
+}
+
+#card:hover , #copy:hover{
+  transform: scale(1.01);
+}
+#card h1 {
+  height: 45px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  align-items: center;
+  padding: 1px 0px 1px 70px;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%); */
+}
+input {
+  margin: 20px 0px 20px 0px;
+  height: 30px;
+  width: 80%;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  font-size: 25px;
+}
+input[type="text"]::placeholder {
+  font-size: 25px;
+}
+.submit {
+  min-height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  /* border: none; */
+  font-size: 30px;
+  /* display: flex; */
+
+  align-items: center;
+  justify-content: center;
+}
+.submit:hover {
+  background-color: green;
+  cursor: pointer;
+}
+.task {
+  width: 100%;
+  min-height: 10vh;
+  padding-left: 5px;
+  /* background-color: aqua; */
+
+  overflow-x: auto;
+  /* overflow-y: auto; */
+}
+.task::-webkit-scrollbar {
+  display: none;
+}
+.cross {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 5px;
+
+  /* background-color: red; */
+}
+.cross i {
+  font-size: 35px;
+  transform: rotate(45deg);
+  min-height: 30px;
+  width: 30px;
+
+  margin: 0px 30px 0px 0px;
+}
+.cross i:hover
+{
+  color: red;
+  cursor: pointer;
+}
+.cross ol {
+  font-size: 30px;
+}
+
+#delete:hover
+{
+  background-color: red;
+}
+
+#copy
+{
+  position: relative;
+  bottom: 5%;
+  right: -6%;
+  background-color: white;
+  padding: 2px;
+  color: black;
+  box-shadow: 5px 5px 30px 2px rgba(0, 0, 0, 0.523);
+  border-radius: 20px 20px 20px 20px; 
+}
+.cross
+{
+  opacity: 0;
+  
+}
+
+@media (max-width: 950px) {
+  #card {
+   min-height: 40vh;
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    /* overflow: hidden; */
+    overflow-y: auto;
+    /* overflow-x: auto; */
+    padding: 20px;
+    position: relative;
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.591);
+  }
+  #card h1 {
+    height: 45px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    align-items: center;
+    padding: 3px 0px 1px 50px;
+    /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%); */
+  }
+  #copy
+{
+  position: relative;
+  bottom: 4%;
+  right: -20%;
+  background-color: white;
+  padding: 2px;
+  color: black;
+  box-shadow: 5px 5px 30px 2px rgba(0, 0, 0, 0.523);
+  border-radius: 20px 20px 20px 20px; 
+}
+}
+
+
+
