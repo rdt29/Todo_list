@@ -14,7 +14,7 @@ const List = (props) => {
     })
     gsap.to(".cross ol" , {
       
-      fontSize:"30px",
+      fontSize:"31px",
       duration:1.1,
     })
   })
