@@ -12,6 +12,11 @@ const List = (props) => {
       rotate:360,
       duration:1.1,
     })
+    gsap.to(".cross ol" , {
+      
+      fontSize:"30px",
+      duration:1.1,
+    })
   })
   return (
     <div className="cross">

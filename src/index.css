@@ -138,6 +138,11 @@ input[type="text"]::placeholder {
   opacity: 0;
   
 }
+.cross ol
+{
+  font-size: 0px;
+
+}
 
 @media (max-width: 950px) {
   #card {
